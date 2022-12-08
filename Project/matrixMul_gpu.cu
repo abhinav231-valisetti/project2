@@ -3,7 +3,7 @@
  *
  * 2022 Mert SIDE
  *
- * CS5375 Computer Systems Organization and Architecture
+ * CS5375 Computer Systems Organization and Architecture 
  * Guest Lecture: GPU Programming
  *
  * Multiplying two matrices on the GPU
@@ -46,10 +46,11 @@ int main(void)
   printf("Size of matrix (N) is %d by %d.\n", N, N);
   int iter = 3;
   clock_t t;
-
+  
   // Martices
   double *x, *y, *ans;
-  //Allocate memory accessible to both CPU and GPU
+
+  // TODO: Allocate Unified Memory - accessible from both CPU and GPU
   cudaMallocManaged(&x,sizeof(double)*N*N);
   cudaMallocManaged(&y,sizeof(double)*N*N);
   cudaMallocManaged(&ans,sizeof(double)*N*N);
@@ -59,7 +60,7 @@ int main(void)
   for (int i = 0; i < N; i++) {
     for(int j = 0; j < N; j++) {
       x[i*N+j] = 5;
-                                                               y[i*N+j] = (i==j?1:0);
+      y[i*N+j] = (i==j?1:0);
       ans[i*N+j] = (double)0.000000000000;
     }
   }
@@ -85,15 +86,12 @@ int main(void)
   else std::cout<<"RUN NOT OK."<<std::endl;
 
   // ..........................................................................
-
-  //Free memory
-  // ...
-  // ...
-  // ...
-                                                                    
+  
+  // TODO: Free memory
   cudaFree(x);
   cudaFree(y);
   cudaFree(ans);
+
   return 0;
 }
 /* EOF */
