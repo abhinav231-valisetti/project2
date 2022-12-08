@@ -92,7 +92,8 @@ int main(void)
     if(i) avg += t; //we will ignore the first run
     // printf ("It took GPU-%d %f ms.\n",i,(((double)t)/CLOCKS_PER_SEC)*1000);
   }
-
+  
+  avg = t;
   avg /= iter;
   avg /= CLOCKS_PER_SEC;
   avg *= 1000;
