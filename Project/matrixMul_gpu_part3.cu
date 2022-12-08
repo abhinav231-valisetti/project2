@@ -84,8 +84,8 @@ int main(void)
   for(int i = 0; i <= iter; i++) {
     t = clock();
 
-    int BLOCK_SIZE = 256
-    int NUM_OF_BLOCKS = (N + BLOCK_SIZE - 1)/BLOCK_SIZE
+    int BLOCK_SIZE = 256;
+    int NUM_OF_BLOCKS = (N + BLOCK_SIZE - 1)/BLOCK_SIZE;
     GPUmatmul<<<NUM_OF_BLOCKS,BLOCK_SIZE>>>(N, x, y,ans);
 
     cudaDeviceSynchronize();
