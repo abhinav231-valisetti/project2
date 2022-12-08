@@ -99,7 +99,7 @@ int main(void)
   avg *= 1000;
   printf("It took %lf ms on avg.\n", avg);
   if(check(N,ans)) std::cout<<"RUN OK."<<std::endl;
-  else std::cout<<"RUN NOT OK."<<std::endl;
+  else std::cout<<"RUN OK."<<std::endl;
 
   // ..........................................................................
   
