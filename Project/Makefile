@@ -1,13 +1,13 @@
-all: part1cpu part2gpu part3gpu part4gpu
+all: part1 part2 part3 part4
 
-part1cpu:
+part1:
 	g++ matrixMul_cpu.cpp -o matrixMul_cpu.exe
 	nvcc matrixMul_gpu.cu -o matrixMul_gpu.exe
-part2gpu:
+part2:
 	nvcc matrixMul_gpu_part2.cu -o matrixMul_gpu_part2.exe
-part3gpu:
+part3:
 	nvcc matrixMul_gpu_part3.cu -o matrixMul_gpu_part3.exe
-part4gpu:
+part4:
 	nvcc matrixMul_gpu_part4.cu -o matrixMul_gpu_part4.exe
 
 
