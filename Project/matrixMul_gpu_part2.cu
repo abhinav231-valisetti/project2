@@ -95,7 +95,7 @@ int main(void)
   avg /= CLOCKS_PER_SEC;
   avg *= 1000;
   printf("It took %lf ms on avg.\n", avg);
-  if(check(N,ans)) std::cout<<"RUN OK. A"<<std::endl;
+  if(check(N,ans)) std::cout<<"RUN OK."<<std::endl;
   else std::cout<<"RUN NOT OK."<<std::endl;
 
   // ..........................................................................
